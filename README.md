@@ -3,7 +3,7 @@
 
 Rendered versions:
 
-http://ocefpaf.github.io/SciPyLA_2016_talk_folium
+http://ocefpaf.github.io/talk_folium
 
 Use the Makefile to create and manage the slides:
 
