@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="slides.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="slippy-maps-with-foliumleaflet" class="slide level1">
+<h1>Slippy maps with folium+leaflet</h1>
+<ul>
+<li class="fragment">I have a problem</li>
+<li class="fragment">I <strong>do not</strong> know JS</li>
+<li class="fragment">I <strong>do not want</strong> to learn JS</li>
+<li class="fragment">but I love <strong>leaflet</strong> maps...</li>
+</ul>
+</section>
+<section id="the-notebook-that-saved-me" class="slide level1">
+<h1>The notebook that saved me!</h1>
+<figure>
+<img src="./images/up_and_down.png" />
+</figure>
+<p><a href="http://nbviewer.ipython.org/gist/wrobstory/1eb8cb704a52d18b9ee8/Up%20and%20Down%20PyData%202014.ipynb">http://nbviewer.ipython.org/gist/wrobstory/1eb8cb704a52d18b9ee8/Up and Down PyData 2014.ipynb</a></p>
+</section>
+<section id="my-anti-gravity-moment" class="slide level1">
+<h1>My anti-gravity moment</h1>
+<figure>
+<img src="./images/python.png" />
+</figure>
+</section>
+<section id="my-first-folium-map" class="slide level1">
+<h1>My first folium map</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> folium
+
+width, height <span class="op">=</span> <span class="dv">650</span>, <span class="dv">500</span>
+radars <span class="op">=</span> folium.Map(location<span class="op">=</span>[<span class="dv">40</span>, <span class="op">-</span><span class="dv">122</span>], zoom_start<span class="op">=</span><span class="dv">5</span>,
+                    tiles<span class="op">=</span><span class="st">&#39;OpenStreetMap&#39;</span>,
+                    width<span class="op">=</span>width, height<span class="op">=</span>height)
+
+<span class="cf">for</span> name, location <span class="op">in</span> locations.items():
+    radars.simple_marker(location<span class="op">=</span>location, popup<span class="op">=</span>name)</code></pre></div>
+</section>
+<section class="slide level1">
+
+<figure>
+<img src="./images/folium.png" />
+</figure>
+</section>
+<section id="the-project-is-under-active-development" class="slide level1">
+<h1>The project is under active development</h1>
+<div class="fragment">
+<p>but we need help!</p>
+</div>
+</section>
+<section id="examples" class="slide level1">
+<h1>Examples</h1>
+<ul>
+<li><a href="./notebooks/secoora/mapa.html">SECOORA</a></li>
+<li><a href="http://nbviewer.jupyter.org/github/ocefpaf/sscsw/blob/master/IOOS_data_demo.ipynb">OOI</a></li>
+<li><a href="http://nbviewer.jupyter.org/github/ocefpaf/boston_light_swim/blob/e70bbf6ebb54ed77c3d8ecfd9d8e9f64091d1976/02-create_map.ipynb">Boston Light Swim</a></li>
+</ul>
+</section>
+<section id="what-to-expect-in-the-next-few-months" class="slide level1">
+<h1>What to expect in the next few months</h1>
+<ul>
+<li>leaflet plugins
+<ul>
+<li>leaflet.time.dimension</li>
+<li>HeatCanvas</li>
+<li>AnimatedMarker</li>
+<li>geoCSV/Shapefile</li>
+</ul></li>
+</ul>
+</section>
+<section id="thank-you" class="slide level1">
+<h1>Thank you!</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

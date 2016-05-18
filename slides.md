@@ -51,18 +51,18 @@ but we need help!
 
 # Examples
 
-- [SECOORA](./notebooks/secoora/mapa.html)
+- [SECOORA](http://nbviewer.jupyter.org/github/SECOORA/skill_score/blob/master/notebooks/timeSeries/ssh/02-create_map.ipynb)
 - [OOI](http://nbviewer.jupyter.org/github/ocefpaf/sscsw/blob/master/IOOS_data_demo.ipynb)
 - [Boston Light Swim](http://nbviewer.jupyter.org/github/ocefpaf/boston_light_swim/blob/e70bbf6ebb54ed77c3d8ecfd9d8e9f64091d1976/02-create_map.ipynb)
 
 ---
 
-# What to expect in the next few months
+# What to expect in the next few months (years!?)
 - leaflet plugins
-    - leaflet.time.dimension
-    - HeatCanvas
+    - Leaflet.TimeDimension
+    - Leaflet.heat
     - AnimatedMarker
-    - geoCSV/Shapefile
+    - geoCSV, Shapefile, etc
 
 ---
 
